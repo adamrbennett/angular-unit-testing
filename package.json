@@ -1,0 +1,23 @@
+{
+  "name": "angular-unit-testing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha **/*.test.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "angular": "1.6.2",
+    "angular-animate": "1.6.2",
+    "angular-aria": "1.6.2",
+    "angular-material": "1.6.2",
+    "angular-messages": "1.6.2",
+    "angular-mocks": "1.6.2",
+    "chai": "^3.5.0",
+    "jsdom": "^9.11.0",
+    "mocha": "^3.2.0",
+    "sinon": "^1.17.7"
+  }
+}
