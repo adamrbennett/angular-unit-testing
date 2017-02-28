@@ -3,7 +3,7 @@
 
 ## Getting Started
 1. Run `npm install` from the repo root to install dependencies.
-2. Run `npm test` to execute the unit tests.
+1. Run `npm test` to execute the unit tests.
 
 ## Notes
 1. Unit testing Angular outside of the browser requires mocking certain Angular objects, which in turn requires mocking the DOM and certain global objects that are normally provided in the context of the browser. DOM mocking is provided by `jsdom`, and `angular-mocks` is used for Angular mocking and dependency injection.
