@@ -46,3 +46,13 @@
     </md-content>
 
 </form>
+
+<div style="visibility: hidden">
+    <div class="md-dialog-container" id="saveDialog">
+        <md-dialog layout-padding>
+            <h2>Your order is ready</h2>
+            <pre style="background-color: #efefef">{{order | json}}</pre>
+            <md-button ng-click="dialog.hide(); reset()">Gimme!</md-button>
+        </md-dialog>
+    </div>
+</div>
