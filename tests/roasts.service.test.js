@@ -1,4 +1,7 @@
-require('./test-helper');
+require('./dom-mocks');
+
+require('../app/services/services.module');
+require('../app/services/roasts.service');
 
 var assert = require('chai').assert;
 
@@ -6,7 +9,9 @@ describe('roasts.service', function() {
 
     describe('#getRoasts', function() {
 
-        beforeEach(ngModule('services'));
+        beforeEach(function() {
+            ngModule('services')
+        });
 
         it('should return an array', inject(function(roastsService) {
             var roasts = roastsService.getRoasts();

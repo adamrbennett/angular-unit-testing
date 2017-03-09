@@ -1,4 +1,7 @@
-require('./test-helper');
+require('./dom-mocks');
+
+require('../app/services/services.module');
+require('../app/services/extras.service');
 
 var assert = require('chai').assert;
 
@@ -6,7 +9,9 @@ describe('extras.service', function() {
 
     describe('#getExtras', function() {
 
-        beforeEach(ngModule('services'));
+        beforeEach(function() {
+            ngModule('services')
+        });
 
         it('should return an array', inject(function(extrasService) {
             var extras = extrasService.getExtras();
@@ -15,9 +20,13 @@ describe('extras.service', function() {
 
         it('should return objects with name properties', inject(function(extrasService) {
             var extras = extrasService.getExtras();
+
+            assert.isOk(extras, 'returned nothing');
+            assert.typeOf(extras, 'array', 'did not return an array');
+
             extras.forEach(function(extra) {
-                assert.typeOf(extra, 'object', 'not an object');
-                assert(extra.hasOwnProperty('name'), 'name property missing');
+                assert.typeOf(extra, 'object', 'did not return an array of objects');
+                assert(extra.hasOwnProperty('name'), 'returned array object missing name property');
             });
         }));
 
