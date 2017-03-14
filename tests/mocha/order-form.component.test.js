@@ -1,12 +1,11 @@
 require('./dom-mocks');
 
-// third party module dependencies
 require('angular-aria');
 require('angular-messages');
 require('angular-material');
 
-require('../app/order/order.module');
-require('../app/order/order-form.component');
+require('../../app/order/order.module.js');
+require('../../app/order/order-form.component.js');
 
 var sinon = require('sinon');
 var assert = require('chai').assert;
@@ -15,9 +14,7 @@ describe('order-form.component', function() {
 
     describe('#save', function() {
 
-        beforeEach(function() {
-            ngModule('order')
-        });
+        beforeEach(ngModule('order'));
 
         it('should place the order', inject(function($rootScope, $componentController) {
             var scope = $rootScope.$new();

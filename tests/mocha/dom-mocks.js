@@ -1,3 +1,17 @@
+// clear modules and globals
+delete require.cache[require.resolve('jsdom')];
+delete require.cache[require.resolve('angular')];
+delete require.cache[require.resolve('angular/angular')];
+delete require.cache[require.resolve('angular-mocks')];
+
+delete global.document;
+delete global.window;
+delete global.navigator;
+delete global.Node;
+delete global.angular;
+delete global.inject;
+delete global.ngModule;
+
 // mock dom
 var jsdom = require('jsdom').jsdom;
 global.document = jsdom('<html><head><script></script></head><body></body></html>');

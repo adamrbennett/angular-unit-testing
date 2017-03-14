@@ -1,17 +1,8 @@
-require('./dom-mocks');
-
-require('../app/services/services.module');
-require('../app/services/order.service');
-
-var assert = require('chai').assert;
-
 describe('order.service', function() {
 
     describe('#placeOrder', function() {
 
-        beforeEach(function() {
-            ngModule('services')
-        });
+        beforeEach(angular.mock.module('services'));
 
         it('should return an order object with a numeric id', inject(function(orderService) {
             var order = {};

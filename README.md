@@ -1,9 +1,12 @@
 # Angular V1 Unit Testing
-> A simple project to demonstrate unit testing Angular modules, services and components using Mocha, Chai and Sinon.
+> A simple project to demonstrate unit testing Angular modules, services and components.
 
 ## Getting Started
 1. Run `npm install` from the repo root to install dependencies.
-1. Run `npm test` to execute the unit tests.
+1. Run `npm run mocha-test` to execute the unit tests using jsdom and Mocha.js.
+1. Run `npm run mocha-watch` to execute the unit tests using jsdom and Mocha.js watch mode.
+1. Run `npm run karma-test` to execute the unit tests using Karma.
+1. Run `npm run karma-watch` to execute the unit tests using Karma watch mode.
 
 ## Notes
 1. Unit testing Angular outside of the browser requires mocking certain Angular objects, which in turn requires mocking the DOM and certain global objects that are normally provided in the context of the browser. DOM mocking is provided by `jsdom`, and `angular-mocks` is used for Angular mocking and dependency injection.

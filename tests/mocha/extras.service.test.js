@@ -1,7 +1,7 @@
 require('./dom-mocks');
 
-require('../app/services/services.module');
-require('../app/services/extras.service');
+require('../../app/services/services.module.js');
+require('../../app/services/extras.service.js');
 
 var assert = require('chai').assert;
 
@@ -9,9 +9,7 @@ describe('extras.service', function() {
 
     describe('#getExtras', function() {
 
-        beforeEach(function() {
-            ngModule('services')
-        });
+        beforeEach(ngModule('services'));
 
         it('should return an array', inject(function(extrasService) {
             var extras = extrasService.getExtras();
